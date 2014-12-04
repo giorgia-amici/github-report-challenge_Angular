@@ -1,15 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="GitUserSearch">
   <head>
     <meta charset="utf-8">
     <title>Github user search</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
+   <!--  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+ <!--    // <script src="bower_components/jquery/dist/jquery.js"></script>
+    // <script src="bower_components/angular/angular.js"></script>
+    // <script src="bower_components/angular-resource/angular-resource.js"></script> -->
+    <script src="app.js"> </script>
+    <script src="gitUserSearchController.js"> </script>
   </head>
 
-  <body>
+  <body ng-controller="gitUserSearchController">
     <div>
       <form class="form-horizontal">
         <input type="text">
@@ -17,7 +20,7 @@
       </form>
       <ul class="list-group">
         <li class="list-group-item">
-          <img src="https://avatars.githubusercontent.com/u/469160?v=3&s=50">
+          <img ng-src="{{user.avatar_url}}">
           <a href="https://github.com/ctrembath">claretrembath</a>
         </li>
       </ul>
